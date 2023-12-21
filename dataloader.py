@@ -10,6 +10,7 @@ class DataLoader():
     """
     统一化数据加载
     """
+    
     def __init__(self, name):
         path = './' + 'data/' + name
         if name in ['cora', 'citeseer', 'pubmed']:

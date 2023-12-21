@@ -47,13 +47,6 @@ def get_train_loader(adj, node_idx):
 
     return train_loader
 
-def get_syn_adj(feat, alpha, A, E):
-    
-    XXT = torch.mm(feat, feat.T)
-    syn_adj = torch.mm(torch.inverse(XXT + alpha * E), (XXT + alpha * A))
-    
-    return syn_adj
-
 class Animator:
     
     def __init__(self, xlabel=None, ylabel=None, legend=None, xlim=None,
